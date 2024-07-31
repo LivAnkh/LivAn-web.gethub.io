@@ -1,0 +1,612 @@
+:root{
+  --main-color:#ee1e1eea;
+  --White:#fff;
+  --text-color:#FFF;
+  --bg-color:#080808;
+  --second-bg-color:#151515;
+  --light-color:#666;
+}
+body{
+  background-color: #080808;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.header{
+  background-color: rgba(243, 106, 106, 0.973);
+  width: 100%;
+  height: 60px;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px;
+}
+.header .logo a {
+  text-decoration: none;
+  font-size: 38px;
+  color: gold;
+}
+.header .logo a span {
+  color: silver;
+}
+.header .menu {
+  display: flex;
+  align-items: center;
+}
+.header .menu ul {
+  display: flex;
+  list-style: none;
+  margin: auto;
+}
+.header .menu ul li {
+  margin: 0 15px;
+}
+.header .menu ul li a {
+  text-decoration: none;
+  font-size: 23px;
+  color: white;
+}
+.header .menu ul li a:hover {
+  cursor: pointer;
+  color: gray;
+}
+.bar-menu {
+  display: none;
+  cursor: pointer;
+  position: relative;
+}
+.bar-menu i {
+  font-size: 35px;
+}
+.dropdown-menu {
+  background-color: rgb(15, 13, 13);
+  width: 100px;
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  display: none;
+  z-index: 1000;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.dropdown-item {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+section{
+  padding: 5rem 5%;
+}
+.home{
+  min-height: 110vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  background-color: black;
+}
+.home .content{
+  display: flex;
+  flex-flow: column;
+  align-items: start;
+  justify-content: center;
+  gap: 1rem;
+}
+.home .content h1{
+  font-size: 4rem;
+  color: var(--text-color);
+  text-transform: capitalize;
+}
+.home .content h1 span{
+  color: var(--main-color);
+}
+.home .content h3{
+  font-size: 2rem;
+  color: var(--text-color);
+  text-transform: capitalize;
+}
+.home .content p{
+  color: var(--text-color);
+  font-size: 1.2rem;
+  text-transform: lowercase;
+  line-height: 1.5;
+  width: 50rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+.home .content .flex-btn{
+  display: inline-block;
+}
+.home .content .flex-btn .btn{
+  color: var(--main-color);
+  background-color: var(--bg-color);
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border: 2px solid var(--main-color);
+  border-radius: 3rem;
+}
+.home .content .flex-btn .btn.hire{
+  background-color: var(--main-color);
+  color: var(--dark-color);
+  border: none;
+}
+.home .content .flex-btn .btn:hover{
+  background-color: var(--main-color);
+  color: var(--text-color);
+  border: none;
+  box-shadow: .1rem .5rem 1rem var(--main-color);
+}
+.home .content .icons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom:2rem ;
+}
+.home .content .icons i{
+  color:var(--main-color);
+  font-size: 2rem;
+  border: .2rem solid var(--main-color);
+  padding: 1rem;
+  border-radius: 50%;
+}
+.home .content .icons i:hover{
+  cursor: pointer;
+  background-color: var(--main-color);
+  color: var(--text-color);
+  box-shadow:  .1rem .5rem 1rem var(--main-color);
+}
+.home img{
+  margin: 1.5rem 0 0 3rem;
+  border-radius: 50%;
+  height: 40rem;
+  width: 40rem;
+  object-fit: cover;
+  box-shadow: 0 0 2.5rem var(--main-color);
+}
+.home img:hover{
+  box-shadow: 0 0 2.5rem var(--main-color),
+              0 0 5rem var(--main-color),
+              0 0 10rem var(--main-color);
+}
+.text-animation{
+  font-size: 2rem;
+  color: var(--text-color);
+  text-transform: capitalize;
+  min-width: 28rem;
+  font-weight:600 ;
+}
+.text-animation span{
+  position: relative;
+}
+.text-animation span::before{
+  content: "Web Developer";
+  color: var(--main-color);
+  animation: words 20s infinite;
+}
+.text-animation span::after{
+  content:" ";
+  border-color: var(--bg-color);
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 3px solid var(--bg-color);
+  right: -8px;
+  animation:  cursor 0.6s infinite,
+              typing 20s steps(14) infinite;
+}
+@keyframes cursor{
+  to{
+    border-left: 2px solid var(--main-color);
+  }
+}
+@keyframes words{
+  0%,
+  20%{
+    content: "Frontend Developer";
+  }
+  21%,
+  40%{
+    content: "Web Designer";
+  }
+  41%,
+  60%{
+    content: "Website";
+  }
+  61%,
+  80%{
+    content: "Web Developer";
+  }
+  81%,
+  100%{
+    content: "Software Tester";
+  }
+}
+@keyframes typing{
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95%{
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85%{
+    width: calc(100% + 8px);
+  }
+}
+
+.team{
+  background-color: var(--second-bg-color);
+}
+.team .heading{
+  color: var(--text-color);
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.team .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  margin: 2rem 0;
+}
+.team .box-container .box img{
+  height: 8rem;
+  width: 8rem;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: .1rem .5rem 1rem var(--main-color);
+  border: .2rem solid var(--main-color);
+}
+.team .box-container .box{
+  background-color: var(--bg-color);
+  border-radius: 2rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  padding: 3rem 1rem;
+  width: 30rem;
+  border: .1rem solid var(--main-color);
+}
+.team .box-container .box h3{
+  color: var(--text-color);
+  font-size: 1.8rem;
+}
+.team .box-container .box p{
+  color: var(--text-color);
+  font-size: 1.2rem;
+  line-height: 2;
+  text-transform: lowercase;
+}
+.team .box-container .box .stars i{
+  color: gold;
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+.team .box-container .box:hover{
+  box-shadow: 0 0 25px var(--main-color),
+              0 0 50px var(--main-color);
+  transform: translateY(-2rem);
+  cursor: pointer;
+}
+.contact{
+   min-height: 100vh;
+   background-color: var(--bg-color);
+   padding: 5rem 5%;
+   display: flex;
+   flex-flow:column;
+   align-items: center;
+   justify-content: center;
+}
+.contact .heading{
+  color: var(--text-color);
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 2em;
+}
+.contact .heading span{
+  color: var(--main-color);
+}
+.contact .form-container{
+  width: 100%;
+}
+.contact .form-container form{
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap:1rem;
+  padding: 2rem;
+  width: 100%;
+}
+.contact .form-container form .input,
+.contact .form-container form .text{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 49%;
+}
+.contact .form-container form .input,
+.contact .form-container form .text textarea{
+  background-color: var(--bg-color);
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 90%;
+  border: .1rem solid var(--main-color);
+  outline: none;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+.contact .form-container form .text textarea{
+  height: 15rem;
+  resize: none;
+}
+.contact .form-container form .text .btn{
+   color: var(--dark-color);
+   font-size: 1.6rem;
+   text-transform: uppercase ;
+   margin-top: 3rem;
+   padding: 1rem 2rem;
+   border-radius: 3rem;
+   background-color: var(--main-color);
+   box-shadow: 0 0 25px var(--main-color);
+}
+.contact .form-container form .text .btn:hover{
+  box-shadow: 0 0 25px var(--main-color),
+              0 0 25px var(--main-color),
+              0 0 50px var(--main-color);
+}
+.footer{
+   background-color: var(--second-bg-color);
+   padding: 5rem 5%;
+   display:flex;
+   align-items: center;
+   justify-content: center;
+   gap: 1rem;
+}
+.footer .icons i{
+  font-size: 2rem;
+  color: var(--text-color);
+  margin: 0 1.5rem;
+}
+.footer .icons i:hover{
+  color: var(--main-color);
+}
+.footer .navbar{
+  margin: 0rem auto;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+.footer .navbar a{
+  font-size: 1.5rem;
+  color: var(--text-color);
+  text-transform: capitalize;
+  font-weight: 500;
+  margin: 2rem 1rem ;
+}
+.footer .navbar a:hover{
+   color: var(--main-color);
+   text-decoration: underline;
+}
+.footer .credit p{
+  font-size: 1.3rem;
+  color: var(--light-color);
+  text-transform: capitalize;
+}
+.footer .credit p i,
+.footer .credit p span{
+  color: var(--main-color);
+  cursor: pointer;
+  transition: 5s;
+}
+.footer .credit p span:hover{
+  color: rgb(253, 253, 253);
+  transform: scale(1.5);
+  transition: 5s;
+}
+.line{
+  width: 3px;
+  height: 500px;
+  background-color: red;
+  margin-top: 2rem;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+.container .box1{
+   width: 40%;
+}
+.container .box1 .box-sub{
+  width: 100%;
+  border: 1px solid red;
+  border-radius: 30px;
+  transition: all ease-in-out .5s;
+}
+.container .box1:hover{
+  transform: translateY(-20px);
+ 
+}
+.container .box1 .box-sub:hover{
+  box-shadow: 0px 0px 30px red;
+}
+.education h1{
+  color: white;
+  font-size: 4rem;
+}
+.container .box1 h3{
+  color: white;
+  font-size: 2rem;
+}
+.container .box1 .box-sub h4,p{
+  color: white;
+  font-size: large;
+}
+.container .box1 .box-sub h4{
+  font-size: larger;
+}
+
+#box1{
+  margin-top: 150px;
+}
+#box1-1{
+  margin-top: 300px;
+  margin-left: -500px;
+}
+/* responsive */
+    @media(max-width:990px){
+      html{
+        font-size: 55.5%;
+      }
+      .home{
+        flex-flow: column-reverse;
+        padding: 8rem 0;
+        padding-top: 15rem;
+      }
+    }
+    @media(max-width:700px){
+      html{
+        font-size: 50.5%;
+      }
+      .home img{
+        height: 35rem;
+        width: 35rem;
+      }
+      .home{
+        padding: 8rem 0;
+      }
+      section{
+        padding: 1rem;
+      }
+      .header{
+        position: relative;
+        padding: 0;
+      }
+      .header .logo,
+      .header .menu{
+        padding: 1rem;
+      }
+      .menu i{
+        display: flex;
+      }
+      .header .navbar.active{
+        display: grid;
+      }
+      .header .navbar{
+        position: absolute;
+        top: 7rem;
+        display: none;
+        text-align: center;
+        justify-content: center;
+        background-color: var(--main-color);
+        width: 100%;
+        gap: 2rem;
+        padding: 1rem;
+      }
+      .header .navbar a#Home{
+        color: var(--text-color);
+        text-decoration: none;
+      }
+      .header .navbar a{
+        width: 100%;
+        padding: 1rem;
+      }
+      .header .navbar a:hover,
+      .header .navbar a#Home:hover{
+        background-color: var(--White);
+        color: var(--main-color);
+        text-decoration: none;
+      }
+    }
+    @media screen and (max-width:450px){
+         .home .content p{
+          width: 35rem;
+         }
+         .education .timeline-items{
+          display: grid;
+         }
+         .contact .form-container form{
+          display: grid
+         }
+         .contact .form-container form .input,
+         .contact .form-container form .text textarea{
+          width: 100%;
+         }
+         .contact{
+          padding: 1rem 0;
+         }
+    }
+    @media screen and (max-width: 1400px) {
+        #box1-1{
+          margin-left:-450px;
+        }
+    }
+    @media screen and (max-width: 1200px) {
+      #box1-1{
+        margin-left:-380px;
+      }
+   }
+   @media screen and (max-width: 1000px) {
+    #box1-1{
+      margin:0px;
+    }
+    .education .container{
+      display: block;
+      justify-content: center;
+      align-items: center;
+      margin: 10px auto !important;
+    }
+    .line{
+      display: none;
+    }
+    #box1{
+      margin: 0px;
+    }
+    .education h3{
+      font-size: medium;
+    }
+    .container .box1 ,#box1,#box1-1{
+      width: 90%;
+      margin: 30px auto;
+    }
+    .container .box1 .box-sub h4,p{
+      font-size: medium;
+    }
+}
+    @media screen and (max-width: 800px) {
+      .header .menu {
+        display: none;
+      }
+      .header .bar-menu {
+        display: block;
+      }
+    }
