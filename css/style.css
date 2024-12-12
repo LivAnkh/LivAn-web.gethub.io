@@ -254,66 +254,7 @@ section{
   }
 }
 
-.team{
-  background-color: var(--second-bg-color);
-}
-.team .heading{
-  color: var(--text-color);
-  font-size: 4rem;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-.team .box-container{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  width: 100%;
-  margin: 2rem 0;
-}
-.team .box-container .box img{
-  height: 8rem;
-  width: 8rem;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: .1rem .5rem 1rem var(--main-color);
-  border: .2rem solid var(--main-color);
-}
-.team .box-container .box{
-  background-color: var(--bg-color);
-  border-radius: 2rem;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  align-items: center;
-  padding: 3rem 1rem;
-  width: 30rem;
-  border: .1rem solid var(--main-color);
-}
-.team .box-container .box h3{
-  color: var(--text-color);
-  font-size: 1.8rem;
-}
-.team .box-container .box p{
-  color: var(--text-color);
-  font-size: 1.2rem;
-  line-height: 2;
-  text-transform: lowercase;
-}
-.team .box-container .box .stars i{
-  color: gold;
-  font-size: 1rem;
-  margin: 1rem 0;
-}
-.team .box-container .box:hover{
-  box-shadow: 0 0 25px var(--main-color),
-              0 0 50px var(--main-color);
-  transform: translateY(-2rem);
-  cursor: pointer;
-}
+
 .contact{
    min-height: 100vh;
    background-color: var(--bg-color);
