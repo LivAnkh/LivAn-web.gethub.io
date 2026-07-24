@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Chreom LivAn | Portfolio</title>
   <link rel="stylesheet" href="./bootstrap-5/css/bootstrap.min.css"> 
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -17,19 +17,24 @@
       
       <div class="menu">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Education</a></li>
-          <li><a href="#">Service</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
+      <button class="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch theme">
+        <i class="fa-solid fa-sun"></i>
+      </button>
       <div class="bar-menu">
-        <i class="fa-solid fa-bars"></i>
+        <button type="button" aria-label="Open navigation menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Home</a></li>
-          <li><a class="dropdown-item" href="#">Education</a></li>
-          <li><a class="dropdown-item" href="#">Service</a></li>
-          <li><a class="dropdown-item" href="#">Contact</a></li>
+          <li><a class="dropdown-item" href="#Home">Home</a></li>
+          <li><a class="dropdown-item" href="#about">About</a></li>
+          <li><a class="dropdown-item" href="#education">Education</a></li>
+          <li><a class="dropdown-item" href="#services">Services</a></li>
+          <li><a class="dropdown-item" href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -59,8 +64,24 @@
             <a href="#" class="btn">contact</a>
        </div>
     </div>
-    <img src="./images/livan.jpg" alt="">
+    <img src="./images/livan.jpg" alt="Portrait of Chreom LivAn">
  </section>
+  <section class="about" id="about">
+    <div class="section-label">ABOUT ME</div>
+    <div class="about-grid">
+      <div>
+        <h2>I build simple, useful <span>digital experiences.</span></h2>
+        <p>Write a short introduction here. Share who you are, what you enjoy building, and the kind of opportunities you are looking for.</p>
+        <a href="#contact" class="btn">Let's talk</a>
+      </div>
+      <div class="about-details">
+        <div><span>Name</span><strong>Chreom Liv An</strong></div>
+        <div><span>Email</span><strong>livan09@gmail.com</strong></div>
+        <div><span>Location</span><strong>Phnom Penh, Cambodia</strong></div>
+        <div><span>Availability</span><strong>Open to work</strong></div>
+      </div>
+    </div>
+  </section>
   
   <section class="education text-center" id="education">
     <h1>Education</h1>
@@ -90,6 +111,27 @@
      </div>
   </section>
 
+  <section class="services" id="services">
+    <div class="section-label">WHAT I DO</div>
+    <h2 class="section-title">Services I can <span>help with.</span></h2>
+    <div class="service-grid">
+      <article class="service-card"><i class="fa-solid fa-code"></i><h3>Web Development</h3><p>Describe the websites or web applications you can create for clients.</p></article>
+      <article class="service-card"><i class="fa-solid fa-pen-ruler"></i><h3>Web Design</h3><p>Describe your design process, tools, or visual work you enjoy doing.</p></article>
+      <article class="service-card"><i class="fa-solid fa-mobile-screen-button"></i><h3>Mobile Development</h3><p>Describe your design process, tools, or visual work you enjoy doing.</p></article>
+      <article class="service-card"><i class="fa-solid fa-mobile-screen-button"></i><h3>QA Testing</h3><p>Explain how you make websites look great on mobile, tablet, and desktop.</p></article>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <div class="section-label">MY WORK</div>
+    <h2 class="section-title">Featured <span>projects.</span></h2>
+    <div class="project-grid">
+      <article class="project-card"><div class="project-number">01</div><h3>My CV</h3><p>Add a short description of your first project and the tools used.</p><a href="#">View project <i class="fa-solid fa-arrow-up-right-from-square"></i></a></article>
+      <article class="project-card"><div class="project-number">02</div><h3>Project Name</h3><p>Add a short description of your second project and the tools used.</p><a href="#">View project <i class="fa-solid fa-arrow-up-right-from-square"></i></a></article>
+      <article class="project-card"><div class="project-number">03</div><h3>Project Name</h3><p>Add a short description of your third project and the tools used.</p><a href="#">View project <i class="fa-solid fa-arrow-up-right-from-square"></i></a></article>
+    </div>
+  </section>
+
 
 <section class="contact" id="contact">
      <h2 class="heading">Contact <span>Me</span></h2>
@@ -102,7 +144,7 @@
               </div>
                <div class="text">
                  <textarea placeholder="Your Message"></textarea>
-                 <a href="#" class="btn">Send Message</a>
+                 <button type="submit" class="btn">Send Message</button>
                </div>
          </form>
       </div>
@@ -127,12 +169,15 @@
       <nav class="navbar">
        <a href="#Home">Meta</a>
        <a href="#education">Telegram</a>
-       <a href="#service">youtube</a>
+       <a href="#services">youtube</a>
        <a href="#contact">TikTok</a>
       </nav>
        <div class="credit"><p>Copyright <i class="fa fa-copyright" aria-hidden="true">2024 by <span>An-Leser</span> All Rights reserved.</i></p></div>
    </nav>
 </footer>
+  <button class="scroll-top" type="button" aria-label="Scroll to top" title="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
   <script src="./bootstrap-5/js/bootstrap.bundle.min.js"></script>
   <script src="./js/script.js"></script>
 </body>
