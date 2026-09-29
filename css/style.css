@@ -568,42 +568,95 @@ textarea {
 
 /* ===== Footer ===== */
 .footer {
-  background: color-mix(in srgb, var(--surface) 80%, var(--bg));
+  background: color-mix(in srgb, var(--surface) 78%, var(--bg));
   border-top: 1px solid var(--border);
-  padding: 3rem 1.25rem;
+  padding: 3rem clamp(1.25rem, 6vw, 7rem);
+}
+
+.footer-inner {
+  display: grid;
+  gap: 1.5rem;
+  justify-items: center;
+  margin-bottom: 0;
+}
+
+.footer-contact--simple {
+  display: grid;
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.footer-copy {
+  color: var(--muted);
+  font-size: .95rem;
+  margin: 0;
+}
+
+.footer-copy span {
+  color: var(--accent-soft);
+}
+
+.footer-social {
+  display: flex;
+  gap: .8rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.footer-social a {
+  align-items: center;
+  background: rgba(255, 255, 255, .05);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--ink);
+  display: inline-flex;
+  height: 44px;
+  justify-content: center;
+  transition: all .2s ease;
+  width: 44px;
+}
+
+.footer-social a:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.footer-email {
+  display: inline-block;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 1.5rem;
   text-align: center;
 }
 
-.footer>.navbar {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.footer .navbar .navbar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.25rem;
-  justify-content: center;
-}
-
-.footer .navbar .navbar a {
+.footer-bottom p {
   color: var(--muted);
-  font-size: .95rem;
+  font-size: .92rem;
 }
 
-.footer .navbar .navbar a:hover {
+.footer-bottom span {
   color: var(--accent-soft);
 }
 
-.credit p {
-  color: var(--muted);
-  font-size: .88rem;
+@media (max-width: 1024px) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-.credit span {
-  color: var(--accent-soft);
+@media (max-width: 720px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    text-align: left;
+  }
 }
 
 /* ===== Back to top button ===== */
